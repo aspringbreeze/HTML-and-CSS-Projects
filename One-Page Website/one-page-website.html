@@ -3,6 +3,7 @@
   <head>
     <title>Travelling around the world</title>
     <link rel="stylesheet" type="text/css" href="css/one_page_website.css"/>
+    <script src="JS/main.js" defer></script>
   </head>
   <body>
     
@@ -17,7 +18,57 @@
       </div>
     </nav>
     <!-- END NAV -->
-    
+
+    <!-- Lightbox -->
+    <h2 style="text-align: center;">Lightbox</h2>
+    <!-- Images used to open the lightbox -->
+    <div class="row">
+      <div class="column">
+        <img src="picture/plant1-small.png" style="width: 100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="picture/plant2-small.png" style="width: 100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="picture/plant3-small.png" style="width: 100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="picture/plant4-small.png" style="width: 100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="picture/plant1.png" style="width: 100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="picture/plant2.png" style="width: 100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="picture/plant3.png" style="width: 100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="picture/plant4.png" style="width: 100%">
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      </div>
+    </div>
+
     <!-- CONTENT -->
     <h1 id="home">Thailand</h1>
     <p>Have you ever been Thailand? Here are picture and video about it!</p>
